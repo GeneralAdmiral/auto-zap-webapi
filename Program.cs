@@ -62,8 +62,13 @@ namespace ConsoleApp1
         }
     }
 
-    class Ball : Shape
+    class Ball : Shape, IDisposable
     {
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         public new string GetName() { return "ball"; }
     }
 
