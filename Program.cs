@@ -72,8 +72,13 @@ namespace ConsoleApp1
         public virtual string GetName() { return "pet"; }
     }
 
-    class Cat : Pet
+    class Cat : Pet, IDisposable
     {
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         public override string GetName()
         {
             return "cat";
