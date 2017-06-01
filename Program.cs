@@ -67,8 +67,13 @@ namespace ConsoleApp1
         public new string GetName() { return "ball"; }
     }
 
-    class Pet
+    class Pet: IDisposable
     {
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         public virtual string GetName() { return "pet"; }
     }
 
